@@ -1,0 +1,99 @@
+{
+  "name": "dark",
+  "note": "Dark style for X posts. Muted off-white is the accent, greys compare, coral only for negatives. Specs name roles, never hex codes. Set your handle here or with INSIGHTS_HANDLE.",
+  "handle": "",
+  "colors": {
+    "bg": "#0F2122",
+    "grid": "#1E3A38",
+    "text": "#F2F8EE",
+    "muted": "#93A79C",
+    "accent": "#F2F8EE",
+    "compare": "#6B8279",
+    "compare2": "#B8C9C0",
+    "negative": "#FF8F7A",
+    "warn": "#FFC46B",
+    "compare3": "#4A6A61"
+  },
+  "roles": {
+    "accent": "main series, big number, 'ours'",
+    "compare": "the comparison side, background",
+    "compare2": "second layer when 3 layers are needed, always lighter than compare",
+    "negative": "negative, risk, warning. At most once per image",
+    "warn": "estimate or self-reported number. Rare",
+    "compare3": "third layer for 4 data layers. Never next to compare (dE 9.0): put compare2 between them, always with a legend, not for thin lines"
+  },
+  "fonts": {
+    "display": "Inter Display",
+    "body": "Inter",
+    "files": "~/Library/Fonts/Inter*.otf",
+    "fallback": "DejaVu Sans"
+  },
+  "type": {
+    "title": 24,
+    "subtitle": 12.5,
+    "hero": 40,
+    "hero_label": 11,
+    "label": 11,
+    "tick": 10.5,
+    "legend": 11,
+    "callout": 11,
+    "source": 9,
+    "handle": 9.5
+  },
+  "weights": {
+    "title": 600,
+    "hero": 600,
+    "label": 400,
+    "legend": 400,
+    "callout": 600
+  },
+  "frames": {
+    "16x9": [
+      12.0,
+      6.75
+    ],
+    "4x5": [
+      7.2,
+      9.0
+    ]
+  },
+  "safe": {
+    "x": 0.06,
+    "y": 0.08
+  },
+  "layout": {
+    "legend_y": 0.775,
+    "plot_top": 0.71,
+    "plot_bottom": 0.19,
+    "hero_h": 0.2,
+    "side_w": 0.3,
+    "gap": 0.05,
+    "ytick_pad": 0.045,
+    "note": "title anchors at 1 - safe.y, source at safe.y; legend_y and plot_top assume a 1-line title and 1-line subtitle, longer ones push the plot down automatically"
+  },
+  "legend": {
+    "position": "top",
+    "marker": "square",
+    "ncol": 4
+  },
+  "lines": {
+    "accent": 2.6,
+    "compare": 1.6,
+    "compare2": 1.8,
+    "compare3": 1.6
+  },
+  "bar_gap": 0.18,
+  "max_panels": 2,
+  "max_series": 4,
+  "save": {
+    "dpi": 300,
+    "svg_fonttype": "path",
+    "tight": false
+  },
+  "validated": {
+    "date": "2026-10-22",
+    "tool": "dataviz validate_palette.js --mode dark --surface #0F2122",
+    "result": "accent/compare/compare2/compare3 adjacent: CVD PASS (worst compare2 vs compare dE 23.2). All pairs: compare3 vs compare dE 9.0 FAIL, compare3 contrast 2.8:1 WARN. Deliberately monochrome palette.",
+    "rule": "compare3 never next to compare, always with a legend"
+  }
+}

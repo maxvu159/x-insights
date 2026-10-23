@@ -1,0 +1,37 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "single",
+  "title": "Only 2 of the 4 picks show a payout. Token A is 3.2x",
+  "subtitle": "Value divided by yearly payout to holders, lower is cheaper. Highlighted: the four picks. Grey: other tokens that share revenue",
+  "source": "Synthetic example data. Holder revenue 30d x 365/30 against market value",
+  "data": {
+    "file": "examples/data/token_multiples.json"
+  },
+  "panels": [
+    {
+      "template": "ranked_bars",
+      "rows": "rows[]",
+      "fields": {
+        "label": "sym",
+        "value": "multiple"
+      },
+      "opts": {
+        "fmt": "x",
+        "sort": "asc",
+        "highlight": [
+          "Token A",
+          "Token B",
+          "Token C",
+          "Token D"
+        ],
+        "missing_text": "no fees or holder payout tracked"
+      }
+    }
+  ],
+  "final": {
+    "n": 6,
+    "desc": "ranked_multiple"
+  }
+}

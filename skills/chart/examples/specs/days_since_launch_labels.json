@@ -1,0 +1,59 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "single",
+  "title": "Chain A's three biggest days came before day 50",
+  "subtitle": "TVL by days since launch, first 112 days. Circles: largest one-day gains",
+  "source": "Synthetic example data, day 1 = first day TVL > 0",
+  "legend": false,
+  "data": {
+    "file": "examples/data/tvl_by_age.json",
+    "snapshot": "latest"
+  },
+  "panels": [
+    {
+      "template": "days_since_launch",
+      "series": [
+        {
+          "key": "series.chain_b",
+          "label": "Chain B",
+          "role": "compare2"
+        },
+        {
+          "key": "series.chain_a",
+          "label": "Chain A",
+          "role": "accent"
+        }
+      ],
+      "opts": {
+        "pair": true,
+        "max_day": 112,
+        "yfmt": "usd_b",
+        "end_values": true,
+        "end_labels": true,
+        "short": {
+          "Chain A": "A",
+          "Chain B": "B"
+        }
+      },
+      "layers": {
+        "points": [
+          {
+            "top_gains": {
+              "series": "accent",
+              "k": 3,
+              "fmt": "usd_m",
+              "text": "+{g}",
+              "suffix": " (day {k})"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "final": {
+    "n": 11,
+    "desc": "days_since_launch_labels"
+  }
+}

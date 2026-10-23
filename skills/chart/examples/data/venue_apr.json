@@ -1,0 +1,34 @@
+{
+ "asof": "2025-06-30",
+ "compare": [
+  {
+   "label": "Asset 1",
+   "a_apr_7d": 0.184,
+   "b_apr_7d": 0.121
+  },
+  {
+   "label": "Asset 2",
+   "a_apr_7d": 0.092,
+   "b_apr_7d": 0.104
+  },
+  {
+   "label": "Asset 3",
+   "a_apr_7d": 0.131,
+   "b_apr_7d": 0.069
+  },
+  {
+   "label": "Asset 4",
+   "a_apr_7d": 0.047,
+   "b_apr_7d": 0.031
+  },
+  {
+   "label": "Asset 5",
+   "a_apr_7d": 0.215,
+   "b_apr_7d": null
+  }
+ ],
+ "summary": {
+  "ahead": 3,
+  "paired": 4
+ }
+}

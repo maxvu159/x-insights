@@ -1,0 +1,51 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "single",
+  "title": "Fresh wallets hold more Token Y than the pool",
+  "subtitle": "Share of all 1B Token Y by who holds it now. Most fresh wallets got their tokens sent over, not bought",
+  "source": "Synthetic example data. Fresh = plain wallet with 3 or fewer txs ever",
+  "data": {
+    "file": "examples/data/holder_split.json"
+  },
+  "panels": [
+    {
+      "template": "ranked_bars",
+      "items": [
+        {
+          "label": "Fresh wallets",
+          "value": "split.fresh",
+          "role": "negative",
+          "note": "31 new wallets, 3 txs or fewer ever"
+        },
+        {
+          "label": "In the pool",
+          "value": "split.pool",
+          "role": "compare",
+          "note": "main AMM pool, what sellers hit"
+        },
+        {
+          "label": "First 10 min buyers",
+          "value": "split.early",
+          "role": "compare2",
+          "note": "74 wallets that bought at launch"
+        },
+        {
+          "label": "Burned",
+          "value": "split.burned",
+          "role": "compare",
+          "note": "sent to the burn address"
+        }
+      ],
+      "opts": {
+        "fmt": "pct1",
+        "sort": "none"
+      }
+    }
+  ],
+  "final": {
+    "n": 8,
+    "desc": "ranked_holders"
+  }
+}

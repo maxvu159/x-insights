@@ -1,0 +1,102 @@
+{
+  "name": "light",
+  "note": "White background, paper style. No handle, no big numbers. For research notes.",
+  "handle": "",
+  "colors": {
+    "bg": "#FFFFFF",
+    "grid": "#E6E6E6",
+    "text": "#1A1A1A",
+    "muted": "#666666",
+    "accent": "#1F3A5F",
+    "compare": "#5F6B78",
+    "compare2": "#9DBBD9",
+    "negative": "#B03A2E",
+    "warn": "#B8860B",
+    "compare3": "#C5D3E0"
+  },
+  "roles": {
+    "accent": "navy, main series",
+    "compare": "grey, comparison side",
+    "compare2": "light blue, second layer",
+    "negative": "brick red for negatives",
+    "warn": "dark gold for estimates",
+    "compare3": "third layer for 4 data layers (not yet run through a palette validator)"
+  },
+  "fonts": {
+    "display": "Inter",
+    "body": "Inter",
+    "files": "~/Library/Fonts/Inter*.otf",
+    "fallback": "DejaVu Sans"
+  },
+  "type": {
+    "title": 18,
+    "subtitle": 11.5,
+    "hero": 28,
+    "hero_label": 10,
+    "label": 10.5,
+    "tick": 10,
+    "legend": 10.5,
+    "callout": 10.5,
+    "source": 8.5,
+    "handle": 9
+  },
+  "weights": {
+    "title": 600,
+    "hero": 600,
+    "label": 400,
+    "legend": 400,
+    "callout": 600
+  },
+  "frames": {
+    "16x9": [
+      12.0,
+      6.75
+    ],
+    "4x5": [
+      7.2,
+      9.0
+    ],
+    "paper": [
+      10.0,
+      6.0
+    ]
+  },
+  "safe": {
+    "x": 0.06,
+    "y": 0.08
+  },
+  "layout": {
+    "legend_y": 0.775,
+    "plot_top": 0.71,
+    "plot_bottom": 0.19,
+    "hero_h": 0.18,
+    "side_w": 0.3,
+    "gap": 0.05,
+    "ytick_pad": 0.045,
+    "note": "title anchors at 1 - safe.y, source at safe.y; legend_y and plot_top assume a 1-line title and 1-line subtitle, longer ones push the plot down automatically"
+  },
+  "legend": {
+    "position": "top",
+    "marker": "square",
+    "ncol": 4
+  },
+  "lines": {
+    "accent": 2.0,
+    "compare": 1.4,
+    "compare2": 1.6,
+    "compare3": 1.6
+  },
+  "bar_gap": 0.25,
+  "max_panels": 2,
+  "max_series": 4,
+  "save": {
+    "dpi": 300,
+    "svg_fonttype": "path",
+    "tight": false
+  },
+  "validated": {
+    "date": "2026-10-22",
+    "tool": "dataviz validate_palette.js --mode light --surface #FFFFFF",
+    "result": "[PASS] CVD separation         worst adjacent #B03A2E↔#5F6B78 ΔE 11.3 (deutan) · tritan 22.3; [PASS] Normal-vision floor    worst adjacent #B03A2E↔#5F6B78 ΔE 17.6 (normal); [WARN] Contrast vs surface    below 3:1 — relief required (visible labels or table view): [[\"#9DBBD9\",1.99]]. compare2 is deliberately light (below 3:1): always label numbers inside its segments. Lightness/chroma FAIL is deliberate (one hue + greys)."
+  }
+}

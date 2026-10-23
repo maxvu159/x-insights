@@ -1,0 +1,39 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "single",
+  "title": "Token X did 13x in a few hours after the listing",
+  "subtitle": "Hourly market cap on 14 Jun 2025, UTC",
+  "source": "Synthetic example data, hourly closes. Event logged at 05:11 UTC",
+  "data": {
+    "file": "examples/data/hourly_mcap.json"
+  },
+  "panels": [
+    {
+      "template": "step_event",
+      "x": "token[].t",
+      "series": [
+        {
+          "key": "token[].mc",
+          "label": "Token X mcap",
+          "role": "accent"
+        }
+      ],
+      "opts": {
+        "yfmt": "usd_m",
+        "hours": 3
+      },
+      "events": [
+        {
+          "x": 1749877860,
+          "label": "listing"
+        }
+      ]
+    }
+  ],
+  "final": {
+    "n": 2,
+    "desc": "step_event_hourly"
+  }
+}

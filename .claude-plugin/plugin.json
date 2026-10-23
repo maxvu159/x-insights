@@ -1,0 +1,9 @@
+{
+  "name": "x-insights",
+  "version": "0.1.0",
+  "description": "Turn what a crypto community on X is talking about into data insight posts: scan accounts, find the angle, lock the numbers, render a reviewed chart, write a short post.",
+  "author": {"name": "maxvu159"},
+  "repository": "https://github.com/maxvu159/x-insights",
+  "license": "MIT",
+  "keywords": ["x", "twitter", "crypto", "defi", "charts", "content"]
+}

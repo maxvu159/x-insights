@@ -1,0 +1,51 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "single",
+  "title": "Day 112: Chain A is 4x where Chain B was",
+  "subtitle": "TVL by days since launch, first 112 days. Chain C ran a points program and faded after it ended",
+  "source": "Synthetic example data, day 1 = first day TVL > 0",
+  "asof_in_source": true,
+  "data": {
+    "file": "examples/data/tvl_by_age.json",
+    "snapshot": "latest"
+  },
+  "panels": [
+    {
+      "template": "days_since_launch",
+      "series": [
+        {
+          "key": "series.chain_d",
+          "label": "Chain D",
+          "role": "compare"
+        },
+        {
+          "key": "series.chain_c",
+          "label": "Chain C",
+          "role": "compare"
+        },
+        {
+          "key": "series.chain_b",
+          "label": "Chain B",
+          "role": "compare2"
+        },
+        {
+          "key": "series.chain_a",
+          "label": "Chain A, day 112 is now",
+          "role": "accent"
+        }
+      ],
+      "opts": {
+        "pair": true,
+        "max_day": 112,
+        "yfmt": "usd_b",
+        "end_values": true
+      }
+    }
+  ],
+  "final": {
+    "n": 10,
+    "desc": "days_since_launch"
+  }
+}

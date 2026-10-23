@@ -1,0 +1,12 @@
+{
+ "asof": "2025-06-30",
+ "supply": 1000000000,
+ "split": {
+  "fresh": 0.141,
+  "pool": 0.122,
+  "early": 0.057,
+  "burned": 0.034
+ },
+ "fresh_wallets": 31,
+ "early_wallets": 74
+}

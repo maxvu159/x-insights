@@ -1,0 +1,60 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "single",
+  "title": "Perps went from a third of volume to half",
+  "subtitle": "Weekly volume on Chain A, 4 weeks. Spot fell, perps grew, the total slipped",
+  "source": "Synthetic example data, 3 to 30 Jun 2025 UTC \u00b7 perps volume is venue reported",
+  "asof_in_source": true,
+  "data": {
+    "file": "examples/data/volume_mix.json"
+  },
+  "panels": [
+    {
+      "template": "stacked_columns",
+      "x": "rows[].d",
+      "series": [
+        {
+          "key": "rows[].spot",
+          "label": "Spot DEX",
+          "role": "compare"
+        },
+        {
+          "key": "rows[].perp_a",
+          "label": "Venue A perps",
+          "role": "accent"
+        },
+        {
+          "key": "rows[].perp_b",
+          "label": "Venue B perps",
+          "role": "compare2"
+        }
+      ],
+      "opts": {
+        "gap": 0.35,
+        "pct": false,
+        "period": "week",
+        "yfmt": "usd_b",
+        "from": "2025-06-03",
+        "labels": "segments"
+      },
+      "callouts": [
+        {
+          "at": "first",
+          "value": "p1+p2",
+          "text": "perps {v:.0%}"
+        },
+        {
+          "at": "last",
+          "value": "p1+p2",
+          "text": "perps {v:.0%}"
+        }
+      ]
+    }
+  ],
+  "final": {
+    "n": 4,
+    "desc": "stacked_weekly"
+  }
+}

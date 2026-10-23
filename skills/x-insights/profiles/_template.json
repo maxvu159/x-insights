@@ -1,0 +1,52 @@
+{
+ "name": "mychain",
+ "title": "My Chain",
+ "_note": "Copy this file to profiles/<name>.json and fill it in. Keys starting with _ are comments.",
+ "filter": "\\bmychain\\b|my chain|\\$TOKENA\\b|\\$TOKENB\\b|\\bTOKENA\\b|@mychain",
+ "filter_note": "One regex. Proper names match without $. Ticker words that are also English words (index, torch, earn) need $ or ALL CAPS. Add community nicknames ('mc', 'my chain s2') or posts using them are missed. Emerging names (>= 3 authors mention a new @handle) pass automatically at the community tier.",
+ "tiers": {
+  "core": ["mychain_official", "mychain_founder"],
+  "projects": ["project_a", "project_a_founder", "project_b"],
+  "community": ["analyst_1", "trader_1", "researcher_1", "degen_1", "builder_1"]
+ },
+ "tiers_note": "core: official accounts and team, every post is read. projects: apps and their founders, every post is read, their numbers are self-reported. community: people whose posts move the conversation, scanned in groups of 5. Score candidates by views per post, share of on-topic posts and whether others quote them. Start with 30 to 60 community accounts.",
+ "dropped": ["big_generalist_account"],
+ "recap_accounts": ["daily_recap_bot"],
+ "recap_note": "Daily recap bots are scanned but not ranked: they crowd the top views and have no view of their own.",
+ "queries": [
+  "my chain",
+  "\"my chain\" TVL",
+  "\"my chain\" volume",
+  "$TOKENA",
+  "mc s2"
+ ],
+ "categories": [
+  ["listing", "listed|listing|binance|bybit|coinbase|now trading on"],
+  ["runner", "\\d+x\\b|from \\$[\\d.]+[kKmM]? to \\$|runner|pumped|ripping|ath\\b|all.time high"],
+  ["smart_money", "whale|wallet|smart money|insider|bundle"],
+  ["yield", "apr|apy|yield|\\bLP\\b|farm|staking|lend|borrow"],
+  ["growth", "tvl|volume|users|revenue|fees|active addresses"]
+ ],
+ "_categories_note": "Ordered by priority: each post takes the first matching label as its main topic. Labels are hints for reading, not a verdict.",
+ "data_map": {
+  "runner": {"data": "DEX hourly OHLCV for the token, top pools, holder count", "chart": "step_event: hourly mcap with event markers", "hook": "X went from $a to $b in N hours, here is what moved it"},
+  "smart_money": {"data": "RPC transfer logs of the token, wallet funding sources", "chart": "ranked_bars: share held by top wallets", "hook": "N wallets hold X%, funded from the same source"},
+  "yield": {"data": "pool volume and TVL by day, fee tier, price change over the same period", "chart": "paired_bars or diverging: fees vs price loss per pool", "hook": "$10K in these pools 30 days ago made $X after price"},
+  "growth": {"data": "DefiLlama chain TVL, DEX volume, app revenue by day for this chain and a peer", "chart": "days_since_launch or stacked_columns", "hook": "At the same age, this chain is ahead of/behind Peer"},
+  "listing": {"data": "price and volume around the listing hour", "chart": "step_event", "hook": "What a listing did to price and volume, hour by hour"}
+ },
+ "angle_types": {
+  "compare": "one measure across 5 to 8 tokens or apps, one number each",
+  "correct": "a claim that is spreading, checked, with the right number",
+  "onchain": "an on-chain number nobody has posted: custody wallets, holders, who bought the red day",
+  "angle": "the side of a hot story few look at: everyone says A, the data shows B comes with it",
+  "money": "a way to earn or a thesis: LP, yield, valuation"
+ },
+ "stance_rules": [
+  "Write your stance here, for example: supportive of the ecosystem when the numbers allow it, never unconditional.",
+  "Outsiders attacking with wrong numbers: answer publicly with the right numbers.",
+  "Insiders or projects overstating: do not dunk. 'The real number is X, still good because Y', or a friendly reply instead of a post.",
+  "Project posts are self-reported: say so and treat them as numbers to check.",
+  "No negativity for views."
+ ]
+}

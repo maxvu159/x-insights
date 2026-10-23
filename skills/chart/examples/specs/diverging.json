@@ -1,0 +1,58 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "single",
+  "title": "LP fees beat the price move on 5 of 6 pools",
+  "subtitle": "Per $10K in the pool over 30 days. Fees earned vs price move and impermanent loss",
+  "source": "Synthetic example data, 30 days to 30 Jun 2025",
+  "data": {
+    "file": "examples/data/pool_returns.json"
+  },
+  "panels": [
+    {
+      "template": "diverging",
+      "items": [
+        {
+          "label": "Pool 1",
+          "pos": "pools.p1.fees",
+          "neg": "pools.p1.loss"
+        },
+        {
+          "label": "Pool 2",
+          "pos": "pools.p2.fees",
+          "neg": "pools.p2.loss"
+        },
+        {
+          "label": "Pool 3",
+          "pos": "pools.p3.fees",
+          "neg": "pools.p3.loss"
+        },
+        {
+          "label": "Pool 4",
+          "pos": "pools.p4.fees",
+          "neg": "pools.p4.loss"
+        },
+        {
+          "label": "Pool 5",
+          "pos": "pools.p5.fees",
+          "neg": "pools.p5.loss"
+        },
+        {
+          "label": "Pool 6",
+          "pos": "pools.p6.fees",
+          "neg": "pools.p6.loss"
+        }
+      ],
+      "opts": {
+        "fmt": "usd",
+        "pos_label": "Fees earned",
+        "neg_label": "Price and IL"
+      }
+    }
+  ],
+  "final": {
+    "n": 7,
+    "desc": "diverging"
+  }
+}

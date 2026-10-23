@@ -1,0 +1,45 @@
+{
+ "asof": "2025-06-30",
+ "rows": [
+  {
+   "sym": "Token A",
+   "pick": true,
+   "multiple": 3.2
+  },
+  {
+   "sym": "Token B",
+   "pick": true,
+   "multiple": 13.8
+  },
+  {
+   "sym": "Token C",
+   "pick": true,
+   "multiple": null
+  },
+  {
+   "sym": "Token D",
+   "pick": true,
+   "multiple": null
+  },
+  {
+   "sym": "Token E",
+   "pick": false,
+   "multiple": 22.5
+  },
+  {
+   "sym": "Token F",
+   "pick": false,
+   "multiple": 19.4
+  },
+  {
+   "sym": "Token G",
+   "pick": false,
+   "multiple": 11.6
+  },
+  {
+   "sym": "Token H",
+   "pick": false,
+   "multiple": 8.1
+  }
+ ]
+}

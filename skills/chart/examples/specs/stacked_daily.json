@@ -1,0 +1,59 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "single",
+  "title": "Perps went from under a third of volume to over half",
+  "subtitle": "Daily volume on Chain A, last 30 days. Spot shrank, perps filled the gap, the total barely moved",
+  "source": "Synthetic example data, 1 to 30 Jun 2025 UTC \u00b7 perps volume is venue reported",
+  "asof_in_source": false,
+  "data": {
+    "file": "examples/data/volume_mix.json"
+  },
+  "panels": [
+    {
+      "template": "stacked_columns",
+      "x": "rows[].d",
+      "series": [
+        {
+          "key": "rows[].spot",
+          "label": "Spot DEX",
+          "role": "compare"
+        },
+        {
+          "key": "rows[].perp_a",
+          "label": "Venue A perps",
+          "role": "accent"
+        },
+        {
+          "key": "rows[].perp_b",
+          "label": "Venue B perps",
+          "role": "compare2"
+        }
+      ],
+      "opts": {
+        "gap": 0.12,
+        "pct": false,
+        "period": null,
+        "yfmt": "usd_b",
+        "from": "2025-06-01"
+      },
+      "callouts": [
+        {
+          "at": "first",
+          "value": "p1+p2",
+          "text": "perps {v:.0%}"
+        },
+        {
+          "at": "last",
+          "value": "p1+p2",
+          "text": "perps {v:.0%}"
+        }
+      ]
+    }
+  ],
+  "final": {
+    "n": 3,
+    "desc": "stacked_daily"
+  }
+}

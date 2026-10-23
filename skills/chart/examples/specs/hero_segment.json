@@ -1,0 +1,76 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "hero_main_side",
+  "legend": false,
+  "title": "Staked tokens earn about 66% a year",
+  "subtitle": "530M of the 600M locked tokens never stake. If the treasury starts staking, it drops to about 11%",
+  "source": "Synthetic example data, token price $0.15, last weekly payout x 52. *estimated week",
+  "data": {
+    "file": "examples/data/lock_split.json"
+  },
+  "hero": [
+    {
+      "value": "66%",
+      "label": "now, on the 58M tokens that stake",
+      "role": "accent"
+    },
+    {
+      "value": "~11%",
+      "label": "if the treasury starts staking",
+      "role": "negative"
+    },
+    {
+      "value": "6.4%",
+      "label": "spread over all locked tokens",
+      "role": "compare"
+    }
+  ],
+  "panels": [
+    {
+      "template": "segment_bar",
+      "title": "All 600M locked tokens. Only staked ones earn the weekly fees",
+      "items": [
+        {
+          "label": "burned",
+          "value": "split.burned",
+          "role": "compare"
+        },
+        {
+          "label": "treasury, not staking",
+          "value": "split.treasury",
+          "role": "compare2"
+        },
+        {
+          "label": "",
+          "caption": "",
+          "value": "split.other",
+          "role": "muted"
+        },
+        {
+          "label": "staked now",
+          "value": "split.staked",
+          "role": "accent"
+        }
+      ],
+      "opts": {
+        "fmt": "num",
+        "min_label": 0.04
+      }
+    },
+    {
+      "template": "hero",
+      "title": "Weekly payout to stakers",
+      "legend": false,
+      "rows": "weekly[]",
+      "opts": {
+        "fmt": "usd"
+      }
+    }
+  ],
+  "final": {
+    "n": 12,
+    "desc": "hero_segment"
+  }
+}

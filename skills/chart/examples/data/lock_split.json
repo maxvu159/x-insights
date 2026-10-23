@@ -1,0 +1,33 @@
+{
+ "asof": "2025-06-30",
+ "price": 0.15,
+ "split": {
+  "burned": 250000000.0,
+  "treasury": 280000000.0,
+  "other": 12000000.0,
+  "staked": 58000000.0
+ },
+ "weekly": [
+  {
+   "label": "2 Jun",
+   "value": 180000.0
+  },
+  {
+   "label": "9 Jun",
+   "value": 150000.0
+  },
+  {
+   "label": "16 Jun*",
+   "value": 95000.0
+  },
+  {
+   "label": "23 Jun",
+   "value": 110000.0
+  }
+ ],
+ "derived": {
+  "apr_staked": 0.6574712643678161,
+  "apr_if_treasury_stakes": 0.11282051282051282,
+  "apr_all_locked": 0.06355555555555556
+ }
+}

@@ -1,0 +1,88 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "single",
+  "title": "Perps only caught up with spot in the last week",
+  "subtitle": "Daily volume on Chain A. Dots mark days where perps were larger than spot. Line: spot alone",
+  "source": "Synthetic example data, 1 to 30 Jun 2025 UTC",
+  "data": {
+    "file": "examples/data/volume_mix.json"
+  },
+  "panels": [
+    {
+      "template": "stacked_columns",
+      "x": "rows[].d",
+      "series": [
+        {
+          "key": "rows[].perp_a",
+          "label": "Venue A perps",
+          "role": "accent"
+        },
+        {
+          "key": "rows[].perp_b",
+          "label": "Venue B perps",
+          "role": "compare2"
+        }
+      ],
+      "opts": {
+        "gap": 0.12,
+        "yfmt": "usd_b",
+        "from": "2025-06-01"
+      },
+      "overlay": {
+        "key": "rows[].spot",
+        "label": "Spot DEX",
+        "role": "compare"
+      },
+      "layers": {
+        "marks": {
+          "when": {
+            "expr": "a + b > s",
+            "vars": {
+              "a": "rows[].perp_a",
+              "b": "rows[].perp_b",
+              "s": "rows[].spot"
+            }
+          },
+          "role": "accent"
+        },
+        "spans": [
+          {
+            "last": 7,
+            "label": "last 7 days"
+          }
+        ],
+        "notes": [
+          {
+            "pos": "tl",
+            "lines": [
+              {
+                "text": "Perps: {v} of 30d volume",
+                "value": "share_30d.perps",
+                "fmt": "pct",
+                "role": "compare2",
+                "bold": true
+              }
+            ]
+          },
+          {
+            "pos": "tl",
+            "x": "span",
+            "lines": [
+              {
+                "text": "perps ahead on {n} of {N} days",
+                "role": "accent",
+                "dot": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "final": {
+    "n": 5,
+    "desc": "stacked_layers"
+  }
+}

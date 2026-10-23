@@ -1,0 +1,49 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "single",
+  "title": "The chain kept its money. The meme tokens did not",
+  "subtitle": "Indexed to 100 on 7 May 2025, the day meme token market caps peaked",
+  "source": "Synthetic example data (chain TVL, 7d DEX volume, top meme tokens market cap), 1 Apr to 20 Jun 2025",
+  "data": {
+    "file": "examples/data/chain_metrics.json"
+  },
+  "panels": [
+    {
+      "template": "line_compare",
+      "x": "chain[].d",
+      "series": [
+        {
+          "key": "chain[].tvl",
+          "label": "Chain TVL",
+          "role": "accent"
+        },
+        {
+          "key": "chain[].dex7",
+          "label": "DEX volume, 7d",
+          "role": "compare2"
+        },
+        {
+          "key": "chain[].memes",
+          "label": "Top meme tokens mcap",
+          "role": "negative"
+        }
+      ],
+      "opts": {
+        "index_to": "2025-05-07",
+        "end_values": true
+      },
+      "events": [
+        {
+          "x": "2025-05-07",
+          "label": "meme peak"
+        }
+      ]
+    }
+  ],
+  "final": {
+    "n": 1,
+    "desc": "line_compare_indexed"
+  }
+}

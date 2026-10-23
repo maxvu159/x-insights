@@ -1,0 +1,53 @@
+{
+  "slug": "examples",
+  "style": "dark",
+  "frame": "16x9",
+  "layout": "single",
+  "title": "Venue A pays more than Venue B on 3 of 4 assets",
+  "subtitle": "7-day APR for the same asset pair on each venue",
+  "source": "Synthetic example data, 7 days to 30 Jun 2025",
+  "data": {
+    "file": "examples/data/venue_apr.json"
+  },
+  "panels": [
+    {
+      "template": "paired_bars",
+      "rows": "compare[]",
+      "fields": {
+        "label": "label",
+        "a": "a_apr_7d",
+        "b": "b_apr_7d"
+      },
+      "opts": {
+        "a_label": "Venue A",
+        "b_label": "Venue B",
+        "fmt": "pct1",
+        "sort": "desc",
+        "missing_text": "no comparable pool"
+      },
+      "note": [
+        {
+          "text": "Venue A ahead on {v} of 4",
+          "value": "summary.ahead",
+          "role": "accent",
+          "bold": true
+        },
+        {
+          "text": ""
+        },
+        {
+          "text": "APR over 7 days moves fast,",
+          "role": "muted"
+        },
+        {
+          "text": "one week is not a trend",
+          "role": "muted"
+        }
+      ]
+    }
+  ],
+  "final": {
+    "n": 13,
+    "desc": "paired_bars"
+  }
+}

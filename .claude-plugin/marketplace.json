@@ -1,0 +1,11 @@
+{
+  "name": "x-insights",
+  "owner": {"name": "maxvu159"},
+  "plugins": [
+    {
+      "name": "x-insights",
+      "source": "./",
+      "description": "Community scan → data → angle → reviewed chart → short post, for any crypto community on X."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+ "asof": "2025-06-30",
+ "pools": {
+  "p1": {
+   "label": "Pool 1",
+   "fees": 552.0,
+   "loss": -5.0
+  },
+  "p2": {
+   "label": "Pool 2",
+   "fees": 734.0,
+   "loss": -277.0
+  },
+  "p3": {
+   "label": "Pool 3",
+   "fees": 392.0,
+   "loss": -452.0
+  },
+  "p4": {
+   "label": "Pool 4",
+   "fees": 501.0,
+   "loss": -4.0
+  },
+  "p5": {
+   "label": "Pool 5",
+   "fees": 648.0,
+   "loss": -310.0
+  },
+  "p6": {
+   "label": "Pool 6",
+   "fees": 914.0,
+   "loss": -9.0
+  }
+ }
+}
