@@ -1,11 +1,14 @@
 {
   "name": "x-insights",
-  "owner": {"name": "maxvu159"},
+  "description": "Claude Code skills for turning X community chatter into data insight posts with reviewed charts.",
+  "owner": {
+    "name": "maxvu159"
+  },
   "plugins": [
     {
       "name": "x-insights",
       "source": "./",
-      "description": "Community scan → data → angle → reviewed chart → short post, for any crypto community on X."
+      "description": "Community scan \u2192 data \u2192 angle \u2192 reviewed chart \u2192 short post, for any crypto community on X."
     }
   ]
 }
